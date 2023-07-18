@@ -1,0 +1,112 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+
+  .calculator{
+    background: white;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(255, 255, 255, 0.6);
+  }
+
+  .calculator-display{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .calculator-display h1 {
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Lucida Console', sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+  }
+
+  /* Custom ScrollBar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Buttons */
+  .calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(175, 173, 173);
+  }
+
+  button:hover{
+    filter: brightness(120%);
+  }
+
+  button:active{
+    transform: translateY(1px);
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+  .operator {
+    background-color: orange;
+    font-size: 35px;
+  }
+
+  .clear{
+    background: rgb(251 46 46);
+    color: white;
+  }
+
+  .equals-sign{
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: #333333;
+    color: white;
+  }
+
+
+@media screen and (width < 600px){
+  .calculator{
+    width: 95%;
+  }
+}
